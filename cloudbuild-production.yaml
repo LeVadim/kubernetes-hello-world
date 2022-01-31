@@ -30,7 +30,7 @@ images: [
 ]
 
 # arguments
-subsctitutions:
+substitutions:
       _PROJECT_ID: 	inner-catfish-339817 # PROJECT ID
       _K8S_ZONE:    us-east4             # K8s zone
       _K8S_CLUSTER: autopilot-cluster-1  # K8s cluster name
