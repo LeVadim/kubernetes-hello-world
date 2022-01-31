@@ -25,7 +25,7 @@ steps:
 
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['patch', 'deployment', '${_DEPLOYMENT}', '-n', '${_NAMESPACE}', '-p',
-           '{"spec": {"template": {"metadata": {"annotations": {"build":"$BUILD_ID"}}, "spec": {"containers": [{"name": "${_DEPLOYMENT}","image": "gcr.io/$PROJECT_ID/$_DEPLOYMENT:$BRANCH_NAME$TAG_NAME-$SHORT_SHA"}]}}}}' ]]
+           '{"spec": {"template": {"metadata": {"annotations": {"build":"$BUILD_ID"}}, "spec": {"containers": [{"name": "${_DEPLOYMENT}","image": "gcr.io/$PROJECT_ID/$_DEPLOYMENT:$BRANCH_NAME$TAG_NAME-$SHORT_SHA"}]}}}}' ]
     env:
       # required K8s cluster env variables
       - 'CLOUDSDK_COMPUTE_ZONE=${_K8S_ZONE}'
