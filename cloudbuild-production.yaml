@@ -29,6 +29,7 @@ images: [
     'gcr.io/${_PROJECT_ID}/$_DEPLOYMENT:latest'
 ]
 
+
 # arguments
 substitutions:
       _PROJECT_ID: 	inner-catfish-339817 # PROJECT ID
