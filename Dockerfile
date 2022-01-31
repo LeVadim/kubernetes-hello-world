@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV CONFIG_PATH=config_production
+ARG CONFIG_PATH
 
 # Installing PACKAGES
 RUN apk --no-cache add \
@@ -54,13 +54,13 @@ RUN ln -s /usr/bin/php8 /usr/bin/php
 RUN mkdir -p /var/www/html
 
 # Configs
-COPY ${CONFIG_PATH}/supervisord.conf /etc/supervisord.conf
-COPY ${CONFIG_PATH}/nginx.conf /etc/nginx/nginx.conf
-COPY ${CONFIG_PATH}/fpm-pool.conf /etc/php8/php-fpm.d/www.conf
-COPY ${CONFIG_PATH}/php.ini /etc/php8/conf.d/custom.ini
+COPY config/supervisord.conf /etc/supervisord.conf
+COPY config/nginx.conf /etc/nginx/nginx.conf
+COPY config/fpm-pool.conf /etc/php8/php-fpm.d/www.conf
+COPY config/php.ini /etc/php8/conf.d/custom.ini
 
 # Entrypoint
-COPY --chown=nginx ${CONFIG_PATH}/entrypoint.sh /entrypoint.sh
+COPY --chown=nginx config/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 # Set Permissions
@@ -74,6 +74,7 @@ USER nginx
 
 # Build the app
 COPY --chown=nginx dashboard /var/www/dashboard
+COPY --chown=nginx ${CONFIG_PATH}/.env /var/www/dashboard
 RUN npm --prefix /var/www/dashboard install
 RUN npm --prefix /var/www/dashboard run build
 RUN mv /var/www/dashboard/build/* /var/www/html

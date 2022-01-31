@@ -14,7 +14,8 @@ steps:
         'build',
         '-t', 'gcr.io/${_PROJECT_ID}/$_DEPLOYMENT:$BRANCH_NAME$TAG_NAME-$SHORT_SHA',
         '-t', 'gcr.io/${_PROJECT_ID}/$_DEPLOYMENT:latest',
-        '-f', 'Dockerfile-production',
+        '-f', 'Dockerfile',
+        '--build-arg', 'CONFIG_PATH=config_production',
         '--cache-from', 'gcr.io/${_PROJECT_ID}/$_DEPLOYMENT:latest',
         '.'
     ]
