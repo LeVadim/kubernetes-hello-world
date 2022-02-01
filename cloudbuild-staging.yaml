@@ -46,6 +46,11 @@ images: [
     'gcr.io/${_PROJECT_ID}/$_DEPLOYMENT:latest'
 ]
 
+# Private worker POOL here
+options:
+  pool:
+    name: 'projects/${_PROJECT_ID}/locations/${_K8S_ZONE}/workerPools/${_WORKER_POOL}'
+
 # arguments
 substitutions:
       _PROJECT_ID: 	inner-catfish-339817 # PROJECT ID
@@ -53,3 +58,4 @@ substitutions:
       _K8S_CLUSTER: autopilot-cluster-1  # K8s cluster name
       _NAMESPACE:   staging              # K8S name space
       _DEPLOYMENT:  frontend             # K8S deployment name
+      _WORKER_POOL: workerpool           # Cloud Build Worker Pool ID
