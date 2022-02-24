@@ -82,5 +82,4 @@ RUN mv /var/www/dashboard/build/* /var/www/html
 EXPOSE 8080
 EXPOSE 8443
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/bin/supervisord", "-n"]
+CMD ["nginx", "-g", "daemon off;"]
