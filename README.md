@@ -25,6 +25,6 @@ Just in case, please see below an explanation of each folder:
 
 # Additionally, please refer to `Cheatsheet.md` for list of useful commands.
 
-# Thank you for watching my course, if you do encounter any issues or you have suggestions, please email me at vadim.d.makarenko@gmail.com , will be glad to connect and hear your feedback, as it is very important to improve this course!
+Thank you for watching my course, if you do encounter any issues or you have suggestions, please email me at vadim.d.makarenko@gmail.com , will be glad to connect and hear your feedback, as it is very important to improve this course!
 
 Vadim Makarenko
