@@ -63,9 +63,11 @@ For PHP users:
 `alias test="php artisan test"`
 
 Easy command for past commit & push
+
 `alias gpush="git add .; git commit -m 'sdk upd'; git push;"`
 
 Authenticate with different Google-Cloud environments/accounts
+
 `alias testcloud="gcloud config set project inner-catfish-339817; gcloud container clusters get-credentials autopilot-cluster-1 —zone us-east4;"`
 
 
