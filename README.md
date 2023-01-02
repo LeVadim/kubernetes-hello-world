@@ -4,9 +4,9 @@ Thanks for attending my course!
 
 In this github repository you will find needed files in order to deploy React JS and Laravel applications.
 
-In Chapter-1.md you will find all the details that pertain to this demo-repository.
+In `Chapter-1.md` you will find all the details that pertain to this demo-repository.
 
-Additionally, please refer to Cheatsheet.md for list of useful commands.
+Additionally, please refer to `Cheatsheet.md` for list of useful commands.
 
 Thank you for watching my course,
 
