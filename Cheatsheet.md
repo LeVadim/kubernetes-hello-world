@@ -36,9 +36,9 @@ Google
 
 `gcloud config set project inner-catfish-339817`
 
-) `docker tag helloworld us.gcr.io/inner-catfish-339817/helloworld:0.0.1`
+-) `docker tag helloworld us.gcr.io/inner-catfish-339817/helloworld:0.0.1`
 
-) `docker push us.gcr.io/inner-catfish-339817/helloworld:0.0.1`
+-) `docker push us.gcr.io/inner-catfish-339817/helloworld:0.0.1`
 
 Quickly switch between projects:
 
