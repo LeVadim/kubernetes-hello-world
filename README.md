@@ -25,7 +25,7 @@ Just in case, please see below an explanation of each folder:
 # Build & Run docker locally:
 `docker build -t reactdocker . --build-arg CONFIG_PATH=config_production`
 
-`docker run -p 80:8443 reactdocker`
+`docker run -p 80:8080 reactdocker`
 
 `go to localhost on your browser and check out the result`
 
