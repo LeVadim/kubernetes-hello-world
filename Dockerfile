@@ -47,9 +47,6 @@ RUN apk --no-cache add \
 
 RUN npm install -g yarn node-gyp
 
-# Create symlink so programs on php would know
-RUN ln -s /usr/bin/php81 /usr/bin/php
-
 # Make directories
 RUN mkdir -p /var/www/html
 
