@@ -22,6 +22,10 @@ Just in case, please see below an explanation of each folder:
 
 `cloudbuild-staging.yaml` - File that google cloud is using in order to run a deployment, create an image and deploy it to Kubernetes in the staging environment
 
+# Build & Run docker locally:
+docker build -t reactdocker . --build-arg CONFIG_PATH=config_production
+docker run -p 80:8443 reactdocker
+go to localhost on your browser and check out the result
 
 # Additionally, please refer to `Cheatsheet.md` for list of useful commands or see below.
 I suggest always having some sort of "Cheat Sheet".  This is where you store all the commands that you use in your daily life.  It doesn't make sense to memorize every single command, it is just not feasible.  This is why I suggest saving this cheat sheet that you will use in this course and improving it later on as you go.
